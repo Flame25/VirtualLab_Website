@@ -12,7 +12,6 @@ let view;
 document.addEventListener('mousemove', function(e) {
   const sidebar = document.getElementById('sidebar');
 
-  // Show sidebar when mouse is near the left edge
   if (e.clientX < 60) {
     sidebar.classList.add('show');
   } else {
@@ -49,7 +48,6 @@ document.getElementById('js_lang').addEventListener('click', function() {
   setLanguage('javascript');
 });
 
-// Initialize the editor with JavaScript
 function initEditor(language) {
   const startState = EditorState.create({
     doc: '', // Initial empty document
@@ -61,7 +59,6 @@ function initEditor(language) {
     parent: document.getElementById("editor")
   });
 }
-// Function to get the language extension based on the language name
 function getLanguageExtension(language) {
   switch (language) {
     case 'javascript':
@@ -73,18 +70,15 @@ function getLanguageExtension(language) {
     case 'cpp':
       return cpp();
     default:
-      return javascript(); // Fallback to JavaScript
+      return javascript();
   }
 }
 
-// Function to set the language based on button click
 function setLanguage(language) {
-  // Reinitialize the editor with the new language
-  view.destroy(); // Destroy the old editor instance
-  initEditor(language); // Create a new editor instance
+  view.destroy();
+  initEditor(language);
 }
 
-// Initialize the editor
 initEditor(currentLanguage);
 // Change mode on button click
 //document.getElementById('changeMode').addEventListener('click', () => {

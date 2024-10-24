@@ -63,7 +63,7 @@ html {
   transition: background-color 0.2s ease, transform 0.2s ease;
   width: 100px;
   height: 30px;
-  margin-left: auto;
+  margin-left: 1%;
   margin-right: 1%;
   margin-bottom: 1%;
   align-items: center;
@@ -89,15 +89,7 @@ html {
   overflow-y: auto;
 }
 
-.desc {
-  border: 2px solid #ccc;
-  border-radius: 20px;
-  padding-left: 1%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-}
-
-.game-panel {
+.pdf-panel {
   flex: 1;
   padding: 20px;
   display: flex;
@@ -106,7 +98,7 @@ html {
   height: 60%;
 }
 
-.game-panel canvas {
+.pdf-panel canvas {
   border: 1px solid #ccc;
   width: 100%;
   height: auto;
@@ -131,82 +123,8 @@ html {
   width: 30px;
 }
 
-#code {
+#send {
   background-color: #03c6fc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  width: 100px;
-  height: 30px;
-  margin-left: 1%;
-  margin-bottom: 1%;
-  align-items: center;
-}
-
-#code:hover {
-  background-color: #02acdb;
-  transform: translateY(-2px);
-}
-
-#code:disabled {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
-}
-
-#block {
-  background-color: #03c6fc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  width: 100px;
-  height: 30px;
-  margin-left: 1%;
-  margin-bottom: 1%;
-  align-items: center;
-}
-
-#block:hover {
-  background-color: #02acdb;
-  transform: translateY(-2px);
-}
-
-#block:disabled {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
-}
-
-.chosen-area .block {
-  background-color: #c5ebd0;
-  border-radius: 5px;
-}
-
-.block {
-  padding: 10px;
-  margin: 5px 0;
-  background-color: #eee;
-  cursor: grab;
-  height: 15px;
-}
-
-.block:hover {
-  background-color: #ddd;
-}
-
-.chosen-area {
-  background-color: #f9f9f9;
-  height: auto;
-}
-
-.clear-button {
-  background-color: #ed5b47;
   color: white;
   border: none;
   border-radius: 5px;
@@ -216,14 +134,20 @@ html {
   width: 100px;
   height: 30px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 1%;
   margin-bottom: 1%;
-  margin-top: 1%;
+  align-items: center;
 }
 
-.clear-button:hover {
-  background-color: #b34334;
+#send:hover {
+  background-color: #02acdb;
   transform: translateY(-2px);
+}
+
+#send:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
 }
 
 .flex-container {
@@ -250,6 +174,14 @@ html {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+.code-output {
+  width: auto;
+  height: auto;
+  resize: none;
+  margin-top: -2px;
+  border: 2px solid #ccc;
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -260,25 +192,4 @@ html {
     flex: none;
     height: 50vh;
   }
-}
-
-.play-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  width: 100px;
-  height: 30px;
-  margin-left: 1%;
-  margin-right: auto;
-  margin-bottom: 1%;
-  margin-top: 1%;
-}
-
-.play-button:hover {
-  background-color: #45a049;
-  transform: translateY(-2px);
 }

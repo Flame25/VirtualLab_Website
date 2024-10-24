@@ -54,7 +54,10 @@
           <div class="chosen-area" id="chosenArea" ondrop="dropToSequence(event)" ondragover="allowDrop(event)">
             <h3>Chosen Blocks</h3>
             <div id="content"></div>
-            <button class="clear-button" onclick="clearSequence()">Clear</button>
+            <div class="flex-container">
+              <button class="clear-button" onclick="clearSequence()">Clear</button>
+              <button class="play-button" onclick="playSequence()">Play</button>
+            </div>
           </div>
         </div>
       </div>
@@ -76,7 +79,6 @@
         <p>Rules Description</p>
       </div>
     </div>
-  </div>
   </div>
   <script type="module" src="js/games.js"></script>
   <script src="js/games_util.js"></script>
