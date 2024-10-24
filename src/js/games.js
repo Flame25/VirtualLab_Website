@@ -8,6 +8,7 @@ import { autocompletion, completeFromList } from '@codemirror/autocomplete';
 
 
 let currentLanguage = 'cpp'
+let view;
 
 const code_button = document.getElementById("code");
 const block_button = document.getElementById("block");

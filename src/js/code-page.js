@@ -7,6 +7,7 @@ import { javascript } from '@codemirror/lang-javascript';
 import { autocompletion, completeFromList } from '@codemirror/autocomplete';
 
 let currentLanguage = 'cpp'
+let view;
 
 document.addEventListener('mousemove', function(e) {
   const sidebar = document.getElementById('sidebar');
