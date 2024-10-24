@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scratch-Like Game</title>
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MyWebsite</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/playground">Code Playground</a></li>
+      <li><a href="/games">Games</a></li>
+      <li><a href="/challenges">Challenges</a></li>
+    </ul>
+  </nav>
+  <h1>Scratch-Like Game Builder</h1>
+
+  <div class="tabs">
+    <button class="tab-button" onclick="openTab('code')">Code</button>
+    <button class="tab-button" onclick="openTab('block')">Block</button>
+  </div>
+
+  <div class="container">
+
+    <div id="block" class="tab-content">
+      <div class="list-container">
+        <h2>Block View</h2>
+        <div class=flex-container>
+          <div class="block-area" id="blockArea" ondrop="droptoRemove(event)" ondragover="allowDrop(event)">
+            <h3>Blocks</h3>
+            <div id="moveBlock" class="block" draggable="true" ondragstart="drag(event)">Move Forward</div>
+            <div id="rotateBlock" class="block" draggable="true" ondragstart="drag(event)">Rotate 90°</div>
+          </div>
+
+          <!-- Chosen Blocks Area -->
+          <div class="chosen-area" id="chosenArea" ondrop="dropToSequence(event)" ondragover="allowDrop(event)">
+            <h3>Chosen Blocks</h3>
+            <div id="content"></div>
+            <button class="clear-button" onclick="clearSequence()">Clear</button>
+          </div>
+
+          <div class="canvas-area">
+            <h3>Canvas</h3>
+            <canvas id="gameCanvas" width="900" height="400"></canvas>
+            <button class="play-button" onclick="playSequence()">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="code" class="tab-content">
+      <h2>Code View</h2>
+      <div class="list-container">
+        <div class="flex-container">
+          <div class="code-area">
+            <textarea id="codeInput" placeholder="Write your code here...."></textarea>
+            <button id="compileButton" class="compile-button" onclick="compileCode()"> Compile</button>
+          </div>
+          <div id="output">
+            <pre></pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
